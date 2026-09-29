@@ -5,31 +5,32 @@
    ========================================================================== */
 
 :root {
-  /* Палитра: спокойный бежевый, крем, пудра, мягкий шалфей и глубокий графит */
-  --bg-main: #FDFBF7;
-  --bg-secondary: #F7F3EC;
+  /* Палитра: благородный глубокий инжир (Velvet Fig), шёлковый кашемир, пудровый кварц и мягкий графит */
+  --bg-main: #FAF8F5;
+  --bg-secondary: #F3EFE9;
   --bg-card: #FFFFFF;
-  --bg-card-subtle: #F9F6F0;
-  --bg-accent-soft: #F2ECE1;
-  --bg-accent-warm: #EADDCF;
-  --border-soft: #EFE8DC;
-  --border-card: #E5DCCE;
-  --border-focus: #C4A482;
+  --bg-card-subtle: #F6F2EB;
+  --bg-accent-soft: #EFE8E1;
+  --bg-accent-warm: #E6DBE2;
+  --border-soft: #EAE3D9;
+  --border-card: #DFD7CC;
+  --border-focus: #533B50;
 
   /* Текстовые цвета */
-  --text-primary: #2C2623;
-  --text-secondary: #605750;
-  --text-muted: #8E847B;
+  --text-primary: #1C191F;
+  --text-secondary: #524A56;
+  --text-muted: #827787;
   --text-light: #FAF8F5;
 
-  /* Акцентные оттенки */
-  --accent-gold: #C29D75;
-  --accent-gold-hover: #AF8A62;
-  --accent-terracotta: #B97A62;
-  --accent-sage: #8A9A86;
-  --accent-sage-light: #EBF0E9;
-  --accent-warm-gradient: linear-gradient(135deg, #FAF6F0 0%, #F3EDE2 100%);
-  --accent-btn-gradient: linear-gradient(135deg, #C5A17A 0%, #B88F66 100%);
+  /* Фирменные акцентные оттенки */
+  --accent-gold: #533B50;
+  --accent-gold-hover: #3E293B;
+  --accent-primary: #533B50;
+  --accent-terracotta: #A66B7D;
+  --accent-sage: #533B50;
+  --accent-sage-light: #EFE4EB;
+  --accent-warm-gradient: linear-gradient(135deg, #FAF8F5 0%, #EFE8EC 100%);
+  --accent-btn-gradient: linear-gradient(135deg, #533B50 0%, #3B2639 100%);
 
   /* Мессенджеры */
   --color-tg: #2AABEE;
@@ -41,10 +42,10 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
   /* Тени и скругления */
-  --shadow-sm: 0 2px 8px rgba(90, 75, 60, 0.04);
-  --shadow-md: 0 8px 24px rgba(90, 75, 60, 0.06);
-  --shadow-lg: 0 16px 40px rgba(90, 75, 60, 0.08);
-  --shadow-float: 0 20px 50px rgba(90, 75, 60, 0.12);
+  --shadow-sm: 0 2px 8px rgba(60, 45, 60, 0.04);
+  --shadow-md: 0 8px 24px rgba(60, 45, 60, 0.07);
+  --shadow-lg: 0 16px 40px rgba(60, 45, 60, 0.10);
+  --shadow-float: 0 20px 50px rgba(60, 45, 60, 0.14);
   --radius-sm: 10px;
   --radius-md: 18px;
   --radius-lg: 28px;
@@ -79,9 +80,9 @@ body {
   overflow-x: hidden;
   position: relative;
   background-image: 
-    radial-gradient(at 15% 15%, rgba(234, 221, 207, 0.35) 0px, transparent 50%),
-    radial-gradient(at 85% 70%, rgba(206, 219, 203, 0.25) 0px, transparent 50%),
-    radial-gradient(at 50% 90%, rgba(243, 237, 226, 0.4) 0px, transparent 50%);
+    radial-gradient(at 12% 15%, rgba(226, 208, 222, 0.35) 0px, transparent 50%),
+    radial-gradient(at 88% 65%, rgba(210, 222, 230, 0.25) 0px, transparent 50%),
+    radial-gradient(at 50% 95%, rgba(246, 239, 232, 0.45) 0px, transparent 50%);
   background-attachment: fixed;
 }
 
@@ -158,9 +159,9 @@ button {
   align-items: center;
   gap: 8px;
   padding: 8px 20px;
-  background: rgba(194, 157, 117, 0.12);
-  color: #8C663D;
-  border: 1px solid rgba(194, 157, 117, 0.25);
+  background: rgba(83, 59, 80, 0.08);
+  color: #533B50;
+  border: 1px solid rgba(83, 59, 80, 0.18);
   border-radius: var(--radius-pill);
   font-size: 0.925rem;
   font-weight: 500;
@@ -187,12 +188,12 @@ button {
 }
 
 .site-header.scrolled {
-  background: rgba(253, 251, 247, 0.94);
+  background: rgba(250, 248, 245, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   padding: 12px 0;
-  box-shadow: 0 4px 20px rgba(90, 75, 60, 0.06);
-  border-bottom: 1px solid rgba(229, 220, 206, 0.6);
+  box-shadow: 0 4px 20px rgba(60, 45, 60, 0.06);
+  border-bottom: 1px solid rgba(220, 210, 220, 0.6);
 }
 
 .header-container {
@@ -211,13 +212,15 @@ button {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--bg-accent-warm);
+  background: linear-gradient(135deg, #EFE5EC 0%, #E2D3DE 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #8C663D;
+  color: #533B50;
   font-size: 1.25rem;
   flex-shrink: 0;
+  border: 1px solid rgba(83, 59, 80, 0.15);
+  box-shadow: 0 2px 8px rgba(83, 59, 80, 0.08);
 }
 
 .logo-text {
@@ -386,7 +389,7 @@ button {
   border-radius: var(--radius-pill);
   font-weight: 500;
   font-size: 1rem;
-  box-shadow: 0 6px 20px rgba(184, 143, 102, 0.35);
+  box-shadow: 0 6px 20px rgba(83, 59, 80, 0.28);
   transition: var(--transition-smooth);
   border: 1px solid rgba(255, 255, 255, 0.25);
   white-space: nowrap;
@@ -394,8 +397,8 @@ button {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(184, 143, 102, 0.45);
-  background: linear-gradient(135deg, #B88F66 0%, #A67C52 100%);
+  box-shadow: 0 10px 25px rgba(83, 59, 80, 0.38);
+  background: linear-gradient(135deg, #422D3F 0%, #2F1C2E 100%);
 }
 
 .btn-secondary {
@@ -559,7 +562,7 @@ button {
 
 .hero-title span.highlight {
   font-style: italic;
-  color: #9E7449;
+  color: #A66B7D;
   position: relative;
   display: inline-block;
 }
@@ -744,12 +747,13 @@ button {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: var(--bg-accent-warm);
+  background: linear-gradient(135deg, #EFE4EC 0%, #E0D0DC 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9E7449;
+  color: #533B50;
   font-size: 1.15rem;
+  border: 1px solid rgba(83, 59, 80, 0.14);
 }
 
 .badge-text-title {
@@ -905,7 +909,7 @@ button {
   font-family: var(--font-serif);
   font-size: 2.1rem;
   font-weight: 600;
-  color: #9E7449;
+  color: #533B50;
   line-height: 1;
 }
 
@@ -962,15 +966,21 @@ button {
 }
 
 .mini-card-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 9px;
-  background: var(--bg-card-subtle);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #F3ECF2 0%, #E9DEE7 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #8C663D;
+  color: #533B50;
   font-size: 1.1rem;
+  border: 1px solid rgba(83, 59, 80, 0.12);
+}
+
+.mini-card-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
 .mini-card-title {
@@ -1040,12 +1050,13 @@ button {
   width: 52px;
   height: 52px;
   border-radius: 16px;
-  background: var(--bg-accent-warm);
+  background: linear-gradient(135deg, #EFE4EC 0%, #DFCFDC 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #8C663D;
+  color: #533B50;
   margin-bottom: 20px;
+  border: 1px solid rgba(83, 59, 80, 0.12);
 }
 
 .audience-title {
@@ -1126,7 +1137,7 @@ button {
 .request-number {
   font-family: var(--font-serif);
   font-size: 1.3rem;
-  color: #9E7449;
+  color: #533B50;
   font-weight: 600;
   width: 36px;
   height: 36px;
@@ -1194,7 +1205,7 @@ button {
 }
 
 .note-content a {
-  color: #9E7449;
+  color: #533B50;
   text-decoration: underline;
   font-weight: 500;
 }
@@ -1234,8 +1245,9 @@ button {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #8C663D;
-  background: var(--bg-card-subtle);
+  color: #533B50;
+  background: rgba(83, 59, 80, 0.08);
+  border: 1px solid rgba(83, 59, 80, 0.15);
   padding: 5px 12px;
   border-radius: 6px;
   margin-bottom: 12px;
@@ -1289,14 +1301,15 @@ button {
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: var(--bg-accent-warm);
-  color: #8C663D;
+  background: linear-gradient(135deg, #533B50 0%, #3B2639 100%);
+  color: #FFFFFF;
   font-family: var(--font-serif);
   font-size: 1.4rem;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 12px rgba(83, 59, 80, 0.25);
 }
 
 .step-title {
@@ -1506,7 +1519,7 @@ button {
 .edu-year-badge {
   background: var(--bg-card-subtle);
   border: 1px solid var(--border-card);
-  color: #8C663D;
+  color: #533B50;
   font-weight: 600;
   font-size: 0.95rem;
   padding: 7px 18px;
@@ -1573,7 +1586,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #8C663D;
+  color: #533B50;
   font-size: 1.25rem;
   transition: transform 0.3s ease;
   flex-shrink: 0;
@@ -1866,7 +1879,8 @@ button {
 }
 
 .footer-links a:hover {
-  color: #9E7449;
+  color: #533B50;
+  font-weight: 500;
 }
 
 .footer-bottom {
@@ -2163,7 +2177,7 @@ button {
   background: #FFFFFF;
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-pill);
-  color: #8C663D;
+  color: #533B50;
   font-weight: 600;
   font-size: 0.85rem;
   transition: var(--transition-fast);
@@ -2216,6 +2230,20 @@ button {
 /* Модалка подтверждения отправки заявки */
 .request-sent-box {
   max-width: 520px;
+}
+
+.sent-success-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #EFE4EC 0%, #DFCFDC 100%);
+  color: #533B50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  border: 1px solid rgba(83, 59, 80, 0.16);
+  box-shadow: 0 4px 14px rgba(83, 59, 80, 0.12);
 }
 
 .sent-summary-card {
