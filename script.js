@@ -339,9 +339,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       }
 
-      const sendViaMailBtn = document.getElementById('sendViaMailBtn');
-      if (sendViaMailBtn) sendViaMailBtn.setAttribute('href', mailtoUrl);
-
       const sendViaTgBtn = document.getElementById('sendViaTgBtn');
       if (sendViaTgBtn) sendViaTgBtn.setAttribute('href', tgUrl);
 

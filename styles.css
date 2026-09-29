@@ -2264,6 +2264,22 @@ button {
   box-shadow: 0 4px 14px rgba(42, 171, 238, 0.35) !important;
 }
 
+.sent-btn-max {
+  background: #FFFFFF !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-soft) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.sent-btn-max:hover {
+  border-color: var(--accent-gold) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-2px);
+}
+
 .sent-btn-vk {
   background: linear-gradient(135deg, #0077FF 0%, #0066DB 100%) !important;
   color: #FFFFFF !important;
