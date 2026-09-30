@@ -304,12 +304,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const channel = formElement.querySelector('input[name="preferredMessenger"]:checked')?.value || 'telegram';
       const comment = formElement.querySelector('[name="clientMessage"]')?.value || 'Без комментария';
       const service = formElement.querySelector('[name="serviceType"]')?.value || 'Первичная консультация (1 500 ₽)';
+      const preferredTime = formElement.querySelector('[name="preferredTime"]')?.value || 'Любое время';
 
       const channelName = channel === 'telegram' ? 'Telegram' : (channel === 'max' ? 'Макс' : 'VK');
 
       // Форматируем текст заявки для мессенджеров и письма
       const msgSubject = `Заявка на консультацию — ${name}`;
-      const msgBody = `Здравствуйте, Анна! Меня зовут ${name}.\nХочу записаться на консультацию: ${service}\nМой контакт для связи: ${contact}\nУдобный мессенджер: ${channelName}\nВопрос / ситуация: ${comment}`;
+      const msgBody = `Здравствуйте, Анна! Меня зовут ${name}.\nХочу записаться на консультацию: ${service}\nМой контакт для связи: ${contact}\nУдобный мессенджер: ${channelName}\nУдобное время: ${preferredTime}\nВопрос / ситуация: ${comment}`;
 
       // Формируем ссылки
       const mailtoUrl = `mailto:${CONTACTS.targetEmail}?subject=${encodeURIComponent(msgSubject)}&body=${encodeURIComponent(msgBody)}`;
@@ -333,6 +334,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="sent-item-value">${service}</span>
           </div>
           <div class="sent-item-row">
+            <span class="sent-item-label">Время:</span>
+            <span class="sent-item-value">${preferredTime}</span>
+          </div>
+          <div class="sent-item-row">
             <span class="sent-item-label">Канал связи:</span>
             <span class="sent-item-value">${channelName}</span>
           </div>
@@ -352,6 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
           `👤 <b>Имя:</b> ${escapeTg(name)}\n` +
           `📞 <b>Телефон / ник:</b> ${escapeTg(contact)}\n` +
           `🏷️ <b>Услуга:</b> ${escapeTg(service)}\n` +
+          `🕐 <b>Удобное время:</b> ${escapeTg(preferredTime)}\n` +
           `💬 <b>Удобный мессенджер:</b> ${escapeTg(channelName)}\n` +
           `📝 <b>Вопрос / ситуация:</b> ${escapeTg(comment)}\n\n` +
           `📅 <i>${new Date().toLocaleString('ru-RU')}</i>`;
@@ -380,6 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('Имя_клиента', name);
         formData.append('Телефон_или_никнейм', contact);
         formData.append('Услуга', service);
+        formData.append('Удобное_время', preferredTime);
         formData.append('Удобный_мессенджер', channelName);
         formData.append('Вопрос_клиента', comment);
 
