@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const NOTIFICATION_CONFIG = {
     // 1. Служебные сообщения прямо в Telegram Анне через бота:
     telegram: {
-      botToken: '', // Вставьте токен бота от @BotFather (например: 7123456789:AAH...)
-      chatId: '',   // Вставьте ваш Chat ID (узнать в боте @userinfobot)
+      botToken: '8895344216:AAGLinCfnJTz62NrgbQK1MToKdrXPiUGe-4',
+      chatId: '1002500917',
     },
     // 2. Отправка на почту:
     email: {
@@ -347,12 +347,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // 1. Автоматическая отправка Анне в Telegram через бота (служебные сообщения)
       if (NOTIFICATION_CONFIG.telegram.botToken && NOTIFICATION_CONFIG.telegram.chatId) {
-        const tgText = `🌿 <b>Новая запись на консультацию!</b>\n\n` +
-          `👤 <b>Имя:</b> ${name}\n` +
-          `📞 <b>Телефон / ник:</b> ${contact}\n` +
-          `🏷️ <b>Услуга:</b> ${service}\n` +
-          `💬 <b>Удобный мессенджер:</b> ${channelName}\n` +
-          `📝 <b>Вопрос / ситуация:</b> ${comment}\n\n` +
+        const escapeTg = (str) => String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        const tgText = `✨ <b>Новая заявка на консультацию!</b>\n\n` +
+          `👤 <b>Имя:</b> ${escapeTg(name)}\n` +
+          `📞 <b>Телефон / ник:</b> ${escapeTg(contact)}\n` +
+          `🏷️ <b>Услуга:</b> ${escapeTg(service)}\n` +
+          `💬 <b>Удобный мессенджер:</b> ${escapeTg(channelName)}\n` +
+          `📝 <b>Вопрос / ситуация:</b> ${escapeTg(comment)}\n\n` +
           `📅 <i>${new Date().toLocaleString('ru-RU')}</i>`;
 
         fetch(`https://api.telegram.org/bot${NOTIFICATION_CONFIG.telegram.botToken}/sendMessage`, {
@@ -365,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
           })
         }).then(r => r.json()).then(tgData => {
           if (tgData.ok) {
-            showToast('Уведомление мгновенно отправлено Анне в Telegram! 🚀', '✨');
+            showToast('Уведомление отправлено Анне в Telegram! 🚀', '✨');
           }
         }).catch(() => {});
       }
