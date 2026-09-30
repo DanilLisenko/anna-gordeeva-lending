@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
+  <defs>
+    <linearGradient id="hzGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#533B50"/>
+      <stop offset="100%" stop-color="#3B2639"/>
+    </linearGradient>
+    <linearGradient id="hzRose" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A66B7D"/>
+      <stop offset="100%" stop-color="#D4A373"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Icon Circle -->
+  <g transform="translate(10, 10) scale(0.5)">
+    <circle cx="100" cy="100" r="92" fill="#FAF8F5" stroke="#EFE4EB" stroke-width="3"/>
+    <circle cx="100" cy="62" r="11" fill="none" stroke="url(#hzGrad)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M85 86 C85 75, 115 75, 115 86 C115 102, 85 105, 100 125 C108 115, 122 108, 122 96" 
+          fill="none" stroke="url(#hzGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M100 125 C75 125, 45 105, 52 82 C65 82, 80 95, 90 108" 
+          fill="none" stroke="url(#hzGrad)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M100 125 C125 125, 155 105, 148 82 C135 82, 120 95, 110 108" 
+          fill="none" stroke="url(#hzRose)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M52 110 C68 142, 132 142, 148 110" 
+          fill="none" stroke="url(#hzGrad)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography Right -->
+  <text x="130" y="58" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="600" fill="#1C191F" letter-spacing="1">Анна Гордеева</text>
+  <text x="132" y="86" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="500" fill="#827787" letter-spacing="3.5">ПСИХОЛОГ ОНЛАЙН</text>
+</svg>
