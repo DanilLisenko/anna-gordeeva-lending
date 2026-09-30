@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Служебные сообщения прямо в Telegram Анне через бота:
     telegram: {
       botToken: '8895344216:AAGLinCfnJTz62NrgbQK1MToKdrXPiUGe-4',
-      chatId: '1002500917',
+      chatId: '6253515765',
     },
     // 2. Отправка на почту:
     email: {
