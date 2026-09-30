@@ -54,7 +54,7 @@
 
 - **Telegram:** [@Fcupls](https://t.me/Fcupls)
 - **VK:** [@fucupls](https://vk.com/fucupls)
-- **Макс:** [+7 995 474 56 27](tel:+79954745627)
+- **Макс:** [Профиль в Макс](https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno) (+7 995 474 56 27)
 - **Email:** [kizamaziza@gmail.com](mailto:kizamaziza@gmail.com)
 
 ---

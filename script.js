@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const CONTACTS = {
     telegram: 'https://t.me/Fcupls',       // ТГ @Fcupls
     vk: 'https://vk.com/fucupls',           // VK @fucupls
-    max: 'tel:+79954745627',                // Макс: +7 995 474 56 27
+    max: 'https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno', // Прямая ссылка на Макс
     maxNumber: '+7 995 474 56 27',
     targetEmail: 'kizamaziza@gmail.com'     // Почта для заявок
   };
@@ -73,17 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Привязка ссылок ко всем кнопкам мессенджеров на странице
   const bindMessengerLinks = () => {
-    document.querySelectorAll('[data-messenger="tg"]').forEach(el => el.setAttribute('href', CONTACTS.telegram));
-    document.querySelectorAll('[data-messenger="vk"]').forEach(el => el.setAttribute('href', CONTACTS.vk));
+    document.querySelectorAll('[data-messenger="tg"]').forEach(el => {
+      el.setAttribute('href', CONTACTS.telegram);
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener noreferrer');
+    });
+    document.querySelectorAll('[data-messenger="vk"]').forEach(el => {
+      el.setAttribute('href', CONTACTS.vk);
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener noreferrer');
+    });
     document.querySelectorAll('[data-messenger="max"]').forEach(el => {
       el.setAttribute('href', CONTACTS.max);
-      el.addEventListener('click', (e) => {
-        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-        if (!isMobile) {
-          e.preventDefault();
-        }
-        openMaxModal();
-      });
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener noreferrer');
     });
   };
   bindMessengerLinks();
