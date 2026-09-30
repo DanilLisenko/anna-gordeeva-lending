@@ -209,18 +209,31 @@ button {
 }
 
 .logo-flower {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #EFE5EC 0%, #E2D3DE 100%);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #533B50;
-  font-size: 1.25rem;
   flex-shrink: 0;
-  border: 1px solid rgba(83, 59, 80, 0.15);
-  box-shadow: 0 2px 8px rgba(83, 59, 80, 0.08);
+  border: 1.5px solid rgba(83, 59, 80, 0.22);
+  box-shadow: 0 2px 10px rgba(83, 59, 80, 0.12);
+  background: #FFFFFF;
+  transition: var(--transition-fast);
+}
+
+.logo-wrapper:hover .logo-flower {
+  transform: rotate(6deg) scale(1.04);
+  box-shadow: 0 4px 14px rgba(83, 59, 80, 0.2);
+  border-color: var(--accent-gold);
+}
+
+.logo-emblem-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .logo-text {
